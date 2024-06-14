@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #4CAF50, #2196F3); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(to bottom right, #18ec90, #0f91b9); /* Gradient background for container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    overflow: hidden; /* Hide overflow from pseudo-element */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Text shadow */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #eaff00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d1fe08;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Text shadow */
+}
+
+#attempts {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Graphics */
+.container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFC107;
+    border: 5px solid #dbfd00;
+    border-radius: 50%;
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
